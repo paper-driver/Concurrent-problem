@@ -40,6 +40,7 @@ This class will be executed right after the server started. It contains three de
 
 ## Appendix
 ### RESTful Request Samples
+You can get the request sample file in ``resources`` folder.
 ```JSON
 {
 	"info": {

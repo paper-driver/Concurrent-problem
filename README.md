@@ -17,6 +17,7 @@ the same time. Optimistic Locking is applied to avoid having race conditions.
 #### POST /api/index/upload
 Upload Dow Jones Index CSV file to database. This is insert operation and it will not update any existing rows.
 One can upload multiple CSV files in one request, and the server will create multiple threads to process them concurrently.
+The actual insert will be executed as batch operations.
 The request will return list of HttpStatus and corresponding custom message. The example RESTful call can be found from Appendix.
 
 #### GET /api/index/getbystock?stock=[Stock Symbol]

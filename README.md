@@ -4,12 +4,12 @@ Execute
 ``java -jar -Dspring.profiles.active=dev target/concurrent-0.0.1-SNAPSHOT.jar`` from the root directory of project.
 
 ## Architecture
-This server is using Spring Async and Spring Transition to manage the concurrency and batch operations.
+This server is using Spring Async and Spring Transaction to manage the concurrency and batch operations.
 
 ### Spring Async
 This is used to create multiple threads. Currently, this server creates 10 threads.
 
-### Spring Transition
+### Spring Transaction
 This is used to make sure no more than one user to update or insert the same data to the database at
 the same time. Optimistic Locking is applied to avoid having race conditions.
 
